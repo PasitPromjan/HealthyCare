@@ -8,21 +8,17 @@ export default function Header() {
         <div className="flex justify-between h-20 items-center">
           <div className="flex-shrink-0 flex items-center">
             <Link href="/" className="flex items-center gap-2">
-              <span className="text-blue-700 font-extrabold text-3xl tracking-tight">Healthy<span className="text-emerald-500">Care</span></span>
+              <span className="text-brand font-extrabold text-3xl tracking-tight">Rom<span className="text-secondary">Sai</span></span>
             </Link>
           </div>
-          
+
           <nav className="hidden md:flex space-x-8">
-            <Link href="/" className="text-slate-700 hover:text-blue-600 hover:bg-slate-50 px-4 py-2 rounded-xl flex items-center gap-2 text-xl font-semibold transition-colors duration-200">
-              <Home className="w-6 h-6 text-blue-600" />
+            <Link href="/" className="text-slate-700 hover:text-brand hover:bg-slate-50 px-4 py-2 rounded-xl flex items-center gap-2 text-xl font-semibold transition-colors duration-200">
+              <Home className="w-6 h-6 text-brand" />
               หน้าหลัก
             </Link>
-            <Link href="/book" className="text-slate-700 hover:text-emerald-600 hover:bg-slate-50 px-4 py-2 rounded-xl flex items-center gap-2 text-xl font-semibold transition-colors duration-200">
-              <CalendarPlus className="w-6 h-6 text-emerald-600" />
-              จองที่พัก
-            </Link>
-            <Link href="/questionnaire" className="text-slate-700 hover:text-purple-600 hover:bg-slate-50 px-4 py-2 rounded-xl flex items-center gap-2 text-xl font-semibold transition-colors duration-200">
-              <FileQuestion className="w-6 h-6 text-purple-600" />
+            <Link href="/questionnaire" className="text-slate-700 hover:text-purple-400 hover:bg-purple-50 px-4 py-2 rounded-xl flex items-center gap-2 text-xl font-semibold transition-colors duration-200">
+              <FileQuestion className="w-6 h-6 text-purple-400" />
               แบบสอบถาม
             </Link>
           </nav>
