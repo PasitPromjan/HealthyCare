@@ -2,6 +2,7 @@
 
 import { MessageCircle, X, Send, Bot, User } from 'lucide-react';
 import { useState } from 'react';
+import { usePathname } from 'next/navigation';
 
 // Mock useChat for frontend-only demo
 function useMockChat() {
@@ -37,8 +38,11 @@ function useMockChat() {
 }
 
 export default function ChatWidget() {
+    const pathname = usePathname();
     const [isOpen, setIsOpen] = useState(false);
     const { messages, input, handleInputChange, handleSubmit } = useMockChat();
+
+    if (pathname === '/questionnaire') return null;
 
     return (
         <>

@@ -12,7 +12,7 @@ export default function Header() {
             </Link>
           </div>
 
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden md:flex items-center space-x-4">
             <Link href="/" className="text-slate-700 hover:text-brand hover:bg-slate-50 px-4 py-2 rounded-xl flex items-center gap-2 text-xl font-semibold transition-colors duration-200">
               <Home className="w-6 h-6 text-brand" />
               หน้าหลัก
@@ -21,9 +21,17 @@ export default function Header() {
               <FileQuestion className="w-6 h-6 text-purple-400" />
               แบบสอบถาม
             </Link>
+            <div className="h-8 w-px bg-slate-200 mx-2" />
+            <Link href="/login" className="text-slate-700 hover:text-brand px-4 py-2 rounded-xl text-xl font-bold transition-all">
+              เข้าสู่ระบบ
+            </Link>
+            <Link href="/register" className="bg-brand text-white px-6 py-2 rounded-xl text-xl font-bold hover:bg-brand-hover transition-all shadow-lg shadow-brand/20">
+              สมัครสมาชิก
+            </Link>
           </nav>
 
-          <div className="flex items-center md:hidden">
+          <div className="flex items-center md:hidden gap-4">
+            <Link href="/login" className="text-slate-700 text-sm font-bold">เข้าสู่ระบบ</Link>
             <button className="text-slate-600 hover:text-blue-600 p-2 focus:outline-none">
               <MessageCircle className="w-8 h-8" />
             </button>
