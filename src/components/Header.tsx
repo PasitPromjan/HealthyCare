@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Home, CalendarPlus, FileQuestion, MessageCircle } from 'lucide-react';
+import { Home, CalendarPlus, FileQuestion, MessageCircle, Search } from 'lucide-react';
 
 export default function Header() {
   return (
@@ -10,6 +10,19 @@ export default function Header() {
             <Link href="/" className="flex items-center gap-2">
               <span className="text-brand font-extrabold text-3xl tracking-tight">Rom<span className="text-secondary">Sai</span></span>
             </Link>
+          </div>
+
+          <div className="hidden lg:flex flex-1 max-w-md mx-8">
+            <div className="relative w-full group">
+              <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                <Search className="h-5 w-5 text-slate-400 group-focus-within:text-brand transition-colors" />
+              </div>
+              <input
+                type="text"
+                placeholder="ค้นหาที่พัก..."
+                className="block w-full pl-10 pr-3 py-2 border border-slate-200 rounded-xl leading-5 bg-slate-50 placeholder-slate-400 focus:outline-none focus:bg-white focus:ring-1 focus:ring-brand focus:border-brand sm:text-lg transition-all"
+              />
+            </div>
           </div>
 
           <nav className="hidden md:flex items-center space-x-4">
@@ -41,3 +54,4 @@ export default function Header() {
     </header>
   );
 }
+
